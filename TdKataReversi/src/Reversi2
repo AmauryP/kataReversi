@@ -1,0 +1,33 @@
+public class Reversi2 {
+
+	public String getLigne (String[] unTableau, int uneLigne) {
+		String ligne = unTableau[uneLigne];
+
+		return ligne;
+	}
+
+	public int getLocalisationJoueur (String unJoueur, String uneLigne) {
+		int positionligne = uneLigne.indexOf(unJoueur);
+
+		return positionligne;
+	}
+
+	public void getCasePossible (String uneLigne, String unJoueur, String auAutreJoueur) {
+		int casejoueur1 = getLocalisationJoueur(unJoueur, uneLigne);
+		int casejoueur2 = getLocalisationJoueur(auAutreJoueur, uneLigne);
+		int casepossible;
+
+		if(abs(casejoueur1 - casejoueur2) = 1) {
+			if(casejoueur1 < casejoueur2) {
+				casepossible = casejoueur2 + abs(casejoueur1 - casejoueur2);
+				else casepossible = casejoueur1 + abs(casejoueur1 - casejoueur2);
+			}
+			casepossible = null;
+		}
+	}
+
+	public static String mettreZero (String uneLigne, int unePosition) {
+		return uneLigne.substring(0,unePosition) + 0 + uneLigne.substring(unePosition+1);
+	}
+
+}
